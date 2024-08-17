@@ -1,12 +1,12 @@
 import 'package:clean_architecture_basic_flutter/domain/entities/user.dart';
 import 'package:clean_architecture_basic_flutter/domain/repositories/user_repository.dart';
 
-class GetUserProfile {
+class UserUseCases {
   final UserRepository repository;
 
-  GetUserProfile(this.repository);
+  UserUseCases(this.repository);
 
-  Future<User> execute() {
+  Future<User> getUserProfile() {
     return repository.getUserProfile();
   }
 }

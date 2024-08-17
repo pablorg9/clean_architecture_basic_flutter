@@ -17,19 +17,19 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('User ID: ${userAccountProvider.user.id}'),
-                  Text('User Name: ${userAccountProvider.user.name}'),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () async {
-                      await userAccountProvider.getUserProfile();
-                    },
-                    child: const Text('Load User Profile'),
-                  ),
-                ],
-              ),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('User ID: ${userAccountProvider.user.id}'),
+            Text('User Name: ${userAccountProvider.user.name}'),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () async {
+                await userAccountProvider.getUserProfile();
+              },
+              child: const Text('Load User Profile'),
+            ),
+          ],
+        ),
       ),
     );
   }

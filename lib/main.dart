@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:clean_architecture_basic_flutter/domain/usecases/get_user_profile.dart';
+import 'package:clean_architecture_basic_flutter/domain/usecases/user_use_cases.dart';
 import 'package:clean_architecture_basic_flutter/injection_container.dart';
 import 'package:clean_architecture_basic_flutter/presentation/providers/user_account_provider.dart';
 import 'package:provider/provider.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ...InjectionContainer.providers(context),
         ChangeNotifierProvider(
           create: (context) => UserAccountProvider(
-            getUserProfileUseCase: context.read<GetUserProfile>(),
+            userUseCases: context.read<UserUseCases>(),
           ),
         ),
       ],
